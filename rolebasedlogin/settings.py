@@ -71,19 +71,34 @@ TEMPLATES = [
 WSGI_APPLICATION = 'rolebasedlogin.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+# DATABASE CONFIGURATION
+# This section tells Django how to connect to your MySQL database.
 
 DATABASES = {
     'default': {
-        'ENGINE' : 'django.db.backends.mysql',
-        'NAME' : config('DB_NAME'),
-        'USER' : config('DB_USER'),
-        'PASSWORD' : config('DB_PASSWORD'),
-        'HOST' : config('DB_HOST'),
-        'PORT' : config('DB_PORT')
+        # ENGINE: This defines which database engine Django will use.
+        # In this case, it's set to use MySQL.
+        'ENGINE': 'django.db.backends.mysql',
+
+        # NAME: This is the name of your MySQL database.
+        # Instead of hardcoding it, we use config() to read from the .env file for security.
+        'NAME': config('DB_NAME'),
+
+        # USER: The MySQL username used to connect to the database.
+        'USER': config('DB_USER'),
+
+        # PASSWORD: The corresponding password for the MySQL user.
+        'PASSWORD': config('DB_PASSWORD'),
+
+        # HOST: The address where your database is hosted.
+        # For local development, it’s usually 'localhost'.
+        'HOST': config('DB_HOST'),
+
+        # PORT: The port used by MySQL. By default, it is 3306.
+        'PORT': config('DB_PORT')
     }
 }
+
 
 
 # Password validation
