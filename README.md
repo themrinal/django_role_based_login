@@ -87,6 +87,3 @@ Pull requests are welcome! If you have ideas for new features or want to improve
 
 
 If this project helps you, please give it a ⭐ on GitHub to support it!
-
-Acknowledgements
-Built using: Django, MySQL and python-decouple
