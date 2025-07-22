@@ -26,6 +26,38 @@ Perfect for college or institutional **admission workflows**, internal panels, o
 
 <img width="442" height="398" alt="image" src="https://github.com/user-attachments/assets/6eccea7f-5ea0-4663-9fbf-9a003c448cf0" />
 
+### Project Root (rolebasedlogin/)
+| File         | Purpose                                                                                                    |
+| ------------ | ---------------------------------------------------------------------------------------------------------- |
+| `.env`       | Stores environment variables like `DB_NAME`, `DB_USER`, `SECRET_KEY`. Not tracked by Git (sensitive info). |
+| `.gitignore` | Tells Git which files/folders to ignore (e.g. `__pycache__`, `.env`, `*.pyc`).                             |
+| `manage.py`  | Command-line utility to run/manage your Django project (e.g. `runserver`, `migrate`, `createsuperuser`).   |
+| `README.md`  | Markdown file for project documentation on GitHub.                                                         |
+
+### rolebasedlogin/ (project folder)
+| File                  | Purpose                                                                                         |
+| --------------------- | ----------------------------------------------------------------------------------------------- |
+| `__init__.py`         | Marks the folder as a Python package.                                                           |
+| `settings.py`         | Django project settings (installed apps, DB config, middleware, etc).                           |
+| `urls.py`             | Root URL routing configuration. Includes URLs from the `users` app.                             |
+| `asgi.py` / `wsgi.py` | Entry points for serving the app with ASGI/WSGI servers in production. Leave untouched for now. |
+
+
+### users/ (your app)
+| File            | Purpose                                                                              |
+| --------------- | ------------------------------------------------------------------------------------ |
+| `__init__.py`   | Marks the `users` folder as a Python package.                                        |
+| `admin.py`      | Registers `UserProfile` in Django Admin to assign roles to users.                    |
+| `apps.py`       | Django app config. Auto-generated. Rarely changed.                                   |
+| `decorators.py` | Custom decorators like `@role_required` to restrict access by user role.             |
+| `forms.py`      | Contains `LoginForm` or any future custom forms.                                     |
+| `models.py`     | Defines `UserProfile` model for storing roles (counsellor, hod, etc.).               |
+| `signals.py`    | Automatically creates a `UserProfile` when a `User` is created (via Django signals). |
+| `tests.py`      | Placeholder for unit tests. You can ignore for now unless writing tests.             |
+| `urls.py`       | Routes app-specific URLs like `/user/login`. Included in main `urls.py`.             |
+| `views.py`      | Handles requests/responses. Contains login logic and role-based redirection.         |
+
+
 
 ## Getting Started
 
