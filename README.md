@@ -35,12 +35,13 @@ cd rolebasedlogin
 
 ### 2. Set Up Environment Variables
 Create a .env file in the root directory with your database credentials:
-
+```
 DB_NAME=your_db_name
 DB_USER=your_username
 DB_PASSWORD=your_password
 DB_HOST=localhost
 DB_PORT=3306
+```
 
 ### 3. Install Dependencies
 pip install Django mysqlclient python-decouple
