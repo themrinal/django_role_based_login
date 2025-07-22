@@ -22,7 +22,7 @@ Perfect for college or institutional **admission workflows**, internal panels, o
 <img width="592" height="223" alt="image" src="https://github.com/user-attachments/assets/58a13168-94c3-427a-803a-0097a01f769f" />
 
 
-## 📂 Project Structure
+## Project Structure
 
 <img width="442" height="398" alt="image" src="https://github.com/user-attachments/assets/6eccea7f-5ea0-4663-9fbf-9a003c448cf0" />
 
