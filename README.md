@@ -76,10 +76,10 @@ Each user must be assigned a role through the Django Admin Panel.
 
 ##  Role-Based View Protection
 Use the @role_required(['role1', 'role2']) decorator to restrict views:
-'''
+```
 @role_required(['hod'])
 def hod_dashboard(request):
-...
+```
 
 
 ## Contributing
