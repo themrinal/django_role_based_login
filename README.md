@@ -76,16 +76,21 @@ DB_PORT=3306
 ```
 
 ### 3. Install Dependencies
+```
 pip install Django mysqlclient python-decouple
+```
 
 ### 4. Run Migrations & Create Superuser
+```
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser
+```
 
 ### 5. Start Development Server
+```
 python manage.py runserver
-
+```
 Visit: http://localhost:8000/user/
 
 
@@ -108,7 +113,7 @@ Each user must be assigned a role through the Django Admin Panel.
 
 
 ##  Role-Based View Protection
-Use the @role_required(['role1', 'role2']) decorator to restrict views:
+Use the ``` @role_required(['role1', 'role2'])``` decorator to restrict views:
 ```
 @role_required(['hod'])
 def hod_dashboard(request):
