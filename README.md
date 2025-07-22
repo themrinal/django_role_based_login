@@ -86,4 +86,4 @@ def hod_dashboard(request):
 Pull requests are welcome! If you have ideas for new features or want to improve role handling, fork the repo and submit a PR.
 
 
-# If this project helps you, please give it a ⭐ on GitHub to support it!
+### If this project helps you, please give it a ⭐ on GitHub to support it!
