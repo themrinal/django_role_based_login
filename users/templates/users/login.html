@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoleBasedLogin</title>
 </head>
+<!-- login.html -->
+<!--
+  This is the login page users see when they visit your Django app.
+  It renders a form where users can enter their username and password to log in.
+-->
+
 <body>
     <h2>Login</h2>
+
+    <!-- This form submits user data to the backend using POST method -->
     <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
+        <!-- 
+            {% csrf_token %} is a built-in Django tag that adds a hidden token to protect 
+            your form from Cross-Site Request Forgery attacks. It's required in every POST form.
+        -->
+        {% csrf_token %}
+
+        <!-- 
+            {{ form.as_p }} automatically renders all the form fields (username and password)
+            as HTML <p> tags using Django's form system.
+        -->
+        {{ form.as_p }}
+
+        <!-- Submit button -->
+        <button type="submit">Login</button>
     </form>
 </body>
+
 </html>
